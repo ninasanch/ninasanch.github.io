@@ -1,0 +1,369 @@
+/* Global Styling for each page */
+
+/*
+RecipeBox's color style guide:
+- background color: #f2f2f2
+- nav bar background: #fb6435
+- nav bar font: #ffffff
+- font color, footer background: #2e282a
+- footer font: #ffffff
+- body links: #c63000
+
+font (imported)
+headings: Merriweather
+everything else: Nunito Sans
+*/
+
+body {
+    background-image: url("../img/recipebox-bg.png");
+    background-repeat: repeat;
+    font-family: 'Nunito Sans', 'Montserrat', sans-serif;
+}
+
+/* Header and navigation, setting bg color*/
+header > nav {
+    background-color: #fb6435;
+    color: #ffffff;
+}
+
+#header-bar {
+    padding: 0px 10%;
+    margin-bottom: 20px;
+}
+
+#off-canvas-id, .top-bar, .top-bar-right, .top-bar ul {
+    background-color: #fb6435;
+}
+
+/* Navigation links have a background color and hover color */
+.top-bar-nav a {
+    background-color: #fb6435;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 14pt;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.top-bar-nav a:hover,
+.top-bar-nav a:active {
+    background-color: #fa825b;
+    text-decoration: none;
+}
+
+#dropdown-li {
+    background-color: #fb6435;
+}
+
+#dropdown-li.is-active a:hover,
+#dropdown-li.is-active a:active {
+    background-color: #fa825b;
+    color: #ffffff;
+}
+
+#submenu-topics a {
+    font-size: 10pt;
+}
+
+/* To make "Help Center" text white when active */
+.dropdown.menu > li.is-active > a {
+    color: #ffffff;
+}
+
+/* To make dropdown/accordion arrows and close button white */
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after,
+.accordion-menu.menu > li.is-accordion-submenu-parent > a::after {
+    border-color: #ffffff transparent transparent;
+}
+
+.submenu-toggle::after {
+    border-color: #ffffff transparent transparent;
+}
+
+/* To make hamburger menu and close button black-ish */
+.close-button {
+    color: #2E282A;
+}
+
+.close-button:hover {
+    color: #cacaca;
+}
+
+.menu-icon::after {
+    background: #2E282A;
+    box-shadow: 0 7px 0 #2E282A, 0 14px 0 #2E282A;
+    -webkit-box-shadow: 0 7px 0 #2E282A, 0 14px 0 #2E282A;
+}
+
+/* add margin to hamburger menu */
+button.menu-icon {
+    margin-bottom: 20px;
+}
+
+/* logo */
+img.logo-img {
+    width: 200px;
+    padding: 15px;
+}
+
+/* Breadcrumbs */
+.breadcrumbs li {
+    font-size: 10pt;
+    font-family: 'Nunito Sans', 'Montserrat', sans-serif;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: '>';
+}
+
+/* Main body links */
+main a, main a:link, main a:visited {
+    color: #c63000;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+main a:hover, main a:active {
+    color: #f96332;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+/* Heading styles */
+h1, h2 {
+    font-family: 'Merriweather', 'Times New Roman', serif;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+h1 {
+    font-size: 24pt;
+}
+
+h2 {
+    font-size: 16pt;
+    padding-top: 20px;
+}
+
+/* Text formatting */
+em {
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Margin to offset fixed footer */
+main {
+    margin-bottom: 100px;
+}
+
+/* padding for On This Page nav*/
+main #on-page-nav {
+    padding: 30px 0px;
+}
+
+/* padding for main sections */
+main section {
+    padding: 30px 0px;
+}
+
+/* styles for side nav (only visible in medium/large) */
+.left-nav {
+    position: fixed;
+    z-index: 1;
+    top: 12%;
+    left: 3%;
+    background: #fb6435;
+    overflow-x: hidden;
+    padding: 8px 0;
+}
+
+.left-nav a,
+.left-nav a:visited,
+.left-nav a:link {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.left-nav a:hover,
+.left-nav a:active {
+    background-color: #fa825b;
+    text-decoration: none;
+}
+
+/* Styles for tiles */
+#tiles-nav li {
+    background-color: #6C9F81;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+#tiles-nav a,
+#tiles-nav a:active,
+#tiles-nav a:hover,
+#tiles-nav a:visited {
+    color: #2e282a;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 30px;
+    height: 120px;
+}
+
+#tiles-nav li:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #7ab392;
+}
+
+/* bottom padding in-between steps */
+section li {
+    padding-bottom: 5px;
+}
+
+.task-list {
+    font-size: 12pt;
+}
+
+/* Styles for task images (uses box model) */
+img.task-img {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    margin-right: auto;
+    height: 600px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    padding: 2px;
+}
+
+/* Footer */
+footer {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: #2e282a;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+/* change footer links to white */
+footer a,
+footer a:visited,
+footer a:link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* change footer links to have background color when hovered */
+footer a:hover,
+footer a:active {
+    background-color: #432923;
+    text-decoration: none; 
+}
+
+/* Make material-icons vertically aligned */
+.material-icons {
+    vertical-align: middle;
+    padding-bottom: 5px;
+}
+
+/* change copyright information font size */
+p.copyright {
+    font-size: 8pt;
+}
+
+/* 
+    Scroll to top button from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+*/
+.scroll-button {
+    position: fixed; /* Fixed/sticky position */
+    bottom: 130px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #d9d9d9; /* Set a background color */
+    color: #2e282a; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 7px; /* Some padding */
+    border-radius: 50px; /* Rounded corners */
+    height: 50px;
+    width: 50px;
+}
+
+.scroll-button:hover {
+    background-color: #2e282a; /* Add a dark-grey background on hover */
+    color: #ffffff;
+}
+
+.scroll-button i {
+    font-size: 25pt;
+}
+
+#scroll-button-hidden {
+    display: none; /* Hidden by default */
+}
+
+
+/* Popup container */
+#popup-container {
+    position: fixed;
+    right: 3%;
+    top: 8%;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+/* The popup */
+.popup-img {
+    width: 80%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    padding: 2px;
+}
+
+/*Slide button*/
+#toggle-slide {
+    background-color: #f96332;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+}
+
+/*Slide button hover colour*/
+#toggle-slide:hover {
+    background-color: #fa825b;
+}
+
+/*Content display within slide button*/
+#sliding-content {
+    padding: 5px;
+    display: none;
+    overflow: hidden;
+}
+
+/* Search result sections hidden by default */
+#results-not-found, #results-found {
+    display: none;
+}

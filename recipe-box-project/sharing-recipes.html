@@ -1,0 +1,222 @@
+<!---Created by Grace Tien--->
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sharing Recipes - RecipeBox</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Merriweather Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Nunito Sans Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+    <!-- Icon Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- Navigation menu here -->
+        <nav id="header-bar">
+            
+            <!-- Off-canvas menu (only visible when toggled, small-view) -->
+            <div class="off-canvas position-right" id="off-canvas-id" data-off-canvas>
+                <!-- Close button -->
+                <button class="close-button" aria-label="Close menu" type="button" data-close>
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <!-- Menu -->
+                <ul class="vertical menu accordion-menu top-bar-nav" data-accordion-menu data-submenu-toggle="true">
+                    <li><a href="https://www.recipebox.com/">Home</a></li>
+                    <li><a href="index.html">Help Center</a>
+                        <ul class="menu vertical nested" id="submenu-topics">
+                            <li><a href="adding-recipes.html">Adding Recipes</a></li>
+                            <li><a href="organizing-recipes.html">Organizing Recipes</a></li>
+                            <li><a href="sharing-recipes.html">Sharing Recipes</a></li>
+                            <li><a href="preparing-your-grocery-list.html">Preparing Your Grocery List</a></li>
+                            <li><a href="ordering-groceries-online.html">Ordering Groceries Online</a></li>
+                            <li><a href="recovering-account-information.html">Recovering Account Information</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Title bar, only visible in medium/large view -->
+            <div class="off-canvas-content" data-off-canvas-content>
+                <div class="top-bar">
+                    <!-- Left-aligned RecipeBox logo here -->
+                    <div class="top-bar-left">
+                        <a class="top-bar-logo" href="https://www.recipebox.com/"><img class="logo-img" src="img/recipe-box-logo.png" /></a>
+                    </div>
+
+                    <!-- Right-aligned menu and buttons -->
+                    <div class="top-bar-right">
+
+                        <ul class="dropdown horizontal menu align-right top-bar-nav" data-responsive-menu="dropdown" data-auto-height="true" data-animate-height="true">
+                            
+                            <li class="hide-for-small-only"><a href="https://www.recipebox.com/">Home</a></li>
+                            <li class="hide-for-small-only" id="dropdown-li"><a href="index.html">Help Center</a>
+                                <ul class="menu vertical nested" id="submenu-topics">
+                                    <li class="hide-for-small-only"><a href="adding-recipes.html">Adding Recipes</a></li>
+                                    <li class="hide-for-small-only"><a href="organizing-recipes.html">Organizing Recipes</a></li>
+                                    <li class="hide-for-small-only"><a href="sharing-recipes.html">Sharing Recipes</a></li>
+                                    <li class="hide-for-small-only"><a href="preparing-your-grocery-list.html">Preparing Your Grocery List</a></li>
+                                    <li class="hide-for-small-only"><a href="ordering-groceries-online.html">Ordering Groceries Online</a></li>
+                                    <li class="hide-for-small-only"><a href="recovering-account-information.html">Recovering Account Information</a></li>
+                                </ul>
+                            </li>
+
+                            <!--Button to open off-canvas menu, only visible in small-->
+                            <li>
+                                <button class="menu-icon show-for-small-only" type="button" data-open="off-canvas-id"></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main class="grid-container">
+
+        <!-- grid-x div class -->
+        <div class="grid-x grid-margin align-center">
+
+            <!-- Left column navigation (only for medium/large) -->
+            <nav id="left-nav" class="left-nav cell medium-2 large-2 hide-for-small-only">
+                <ul class="vertical menu accordion-menu" data-accordion-menu>
+                    <li><a href="https://www.recipebox.com/">Home</a></li>
+                    <li><a href="index.html">Help Center</a>
+                        <ul class="menu vertical nested">
+                            <li><a href="adding-recipes.html">Adding Recipes</a></li>
+                            <li><a href="organizing-recipes.html">Organizing Recipes</a></li>
+                            <li><a href="sharing-recipes.html">Sharing Recipes</a></li>
+                            <li><a href="preparing-your-grocery-list.html">Preparing Your Grocery List</a></li>
+                            <li><a href="ordering-groceries-online.html">Ordering Groceries Online</a></li>
+                            <li><a href="recovering-account-information.html">Recovering Account Information</a></li>
+                    </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- container for the rest of the body text
+                Small: 10 cols
+                Medium: 7 cols
+                Large: 6 cols
+            -->
+            <div class="cell small-10 medium-7 large-6">
+
+                <!-- Breadcrumbs-->
+                <nav aria-label="You are here:" role="navigation">
+                    <ul class="breadcrumbs">
+                        <li><a href="https://www.recipebox.com/">Home</a></li>
+                        <li><a href="index.html">RecipeBox Help Center</a></li>
+                        <li><span class="show-for-sr">Current:</span> Sharing Recipes</li>
+                    </ul>
+                </nav>
+
+                <!-- Heading Topic: Sharing Recipes -->
+                <h1>Sharing Recipes</h1>
+
+                <!-- Navigation within page -->
+                <nav class="grid-x">
+                    <div class="cell large-12 medium-12 small-12">
+                        <h2>On this page</h2>
+                        <ul>
+                            <li><a href="#print-recipe">Printing your recipe</a></li>
+                            <li><a href="#share-recipe">Sharing your recipe digitally</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                
+                <!-- Button to increase task text size -->
+                <input type="button" id="increaseTextButton" value="Increase text size for tasks" onclick="toggleTextSize()">
+
+                <!-- Subtopic: Changing your grocery retailer -->
+                <section class="grid-x">
+                    <div class="cell large-12 medium-12 small-12">
+                        <h2 id="print-recipe">Printing your recipe</h2>
+
+                        <!-- Instructions -->
+                        <ol class="task-list">
+                            <li>Tap <em>My Recipes</em> in the bottom toolbar.</li>
+                            <li>Tap on the recipe that you would like to print.</li>
+                            <li>Tap on the <em>Ellipsis Icon</em> in the top right. <input type="button" id="ellipsisIconImageEnlargeButton" value="Enlarge image" onclick="enlargeImage('#ellipsisIconImageEnlargeButton', '#ellipsisIconImage')">
+                                <img src="img/ellipsis-icon.jpg" id="ellipsisIconImage" alt="Print button" class="task-img" /> 
+                            </li>
+                            <li>Tap <em>Print Recipe</em>.</li>
+                            <li>Change any specific printer settings you may have. <input type="button" id="printRecipeImageEnlargeButton" value="Enlarge image" onclick="enlargeImage('#printRecipeImageEnlargeButton', '#printRecipeImage')">
+                                <img src="img/printing-recipe.jpg" id= "printRecipeImage" alt="Print a recipe" class="task-img" />
+                            </li>
+                            <li>Tap <em>Print</em> in the top right.</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <!-- Subtopic: Changing your grocery retailer -->
+                <section class="grid-x">
+                    <div class="cell large-12 medium-12 small-12">
+                        <h2 id="share-recipe">Sharing your recipe digitally</h2>
+
+                        <!-- Instructions -->
+                        <ol class="task-list">
+                            <li>Tap <em>My Recipes</em> in the bottom toolbar.</li>
+                            <li>Tap on the recipe that you would like to share.</li>
+                            <li>Tap the <em>Share Icon</em> in the top right. <input type="button" id="shareButtonImageEnlargeButton" value="Enlarge image" onclick="enlargeImage('#shareButtonImageEnlargeButton', '#shareButtonImage')">
+                                <img src="img/share-button.jpg" id= "shareButtonImage" alt="Sharing a recipe" class="task-img" />
+                            </li>
+                            <li>Tap <em>Copy</em>. <input type="button" id="copyRecipeImageEnlargeButton" value="Enlarge image" onclick="enlargeImage('#copyRecipeImageEnlargeButton', '#copyRecipeImage')">
+                                <img src="img/copy-recipe.jpg" id= "copyRecipeImage" alt="Copy a recipe" class="task-img" />
+                            </li>
+                            <li>Open your messaging app (Ex: Gmail, iMessage, Text message, WhatsApp, etc.).</li>
+                            <li>Start a message to your recipient.</li>
+                            <li><em>Paste</em> your recipe link.</li>
+                            <li>Type any additional details in your message.</li>
+                            <li>Send the message.</li>
+                        </ol>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Scroll to top button -->
+        <a href="#"><button class="scroll-button" title="Scroll to top"><i class="material-icons">&#xe25a;</i></button></a>
+
+    </main>
+
+    <!-- Footer contains contact link and copyright information-->
+    <footer>
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x align-center">
+                <div class="cell small-10 medium-8 large-6 align-center">
+                    <a href="https://support.recipebox.com/portal/en/newticket?departmentId=440698000143207371&layoutId=440698000143224658"><i class="material-icons">&#xe0d0;</i> Contact us</a>
+
+                    <p class="copyright">
+                        © 2024 RecipeBox LLC.<br>Made with love in Orlando, FL. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/grace.js"></script>
+</body>
+</html>
